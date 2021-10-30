@@ -21,7 +21,7 @@
       <button type="button" data-testid="nickname-button" class="webchat_nickname__button webchat__button">Salvar</button>
       <ul class="webchat_user__box webchat_box"></ul>
       <ul class="webchat__message__box webchat_box">
-        <% posts.forEach(({ message, nickname, timestamp }) => { %>
+        <% messages.forEach(({ message, nickname, timestamp }) => { %>
           <li data-testid="message" class="webchat__message__item"><%= `${timestamp} - ${nickname}: ${message}` %></li>
         <% }) %>
       </ul>

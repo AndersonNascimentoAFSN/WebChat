@@ -2,9 +2,10 @@
   "name": "WebChat",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/api/server",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/AndersonNascimentoAFSN/WebChat/issues"
   },
-  "homepage": "https://github.com/AndersonNascimentoAFSN/WebChat#readme"
+  "homepage": "https://github.com/AndersonNascimentoAFSN/WebChat#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "mongodb": "^4.1.3",
+    "socket.io": "^4.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.1.0",
+    "eslint-config-trybe-backend": "^1.0.4",
+    "nodemon": "^2.0.14",
+    "stylelint": "^14.0.1",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-order": "^5.0.0"
+  }
 }
