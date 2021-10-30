@@ -4,6 +4,7 @@ const http = require('http');
 const cors = require('cors');
 const path = require('path');
 const { Server } = require('socket.io');
+const route = require('../routes');
 
 const app = express();
 
@@ -24,6 +25,8 @@ app.use(express.static(path.join(__dirname, '..', '..', '/public')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '..', '/views'));
+
+app.use('/', route.messagesRoutes);
 
 module.exports = {
   io, serverHttp,
