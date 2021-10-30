@@ -4,4 +4,4 @@ const createMessages = require('./Messages/createMessages');
 module.exports = {
   createMessages,
   getAllMessages,
-}
+};
