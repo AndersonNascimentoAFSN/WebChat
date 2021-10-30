@@ -14,7 +14,7 @@
 
   <main>
     <header class="c-header">
-      <h1 class="header__title">TryChat</h1>
+      <img src="/img/TryChat-Logo-white.png" alt="TryChat Logo" class="header__logo"/>
     </header>
     <div class="c_webchat">
       <input type="text" placeholder="Insira seu nickname" data-testid="nickname-box" class="webchat_nickname__input webchat__input"/>
@@ -25,7 +25,7 @@
           <li data-testid="message" class="webchat__message__item"><%= `${timestamp} - ${nickname}: ${message}` %></li>
         <% }) %>
       </ul>
-      <input type="text" placeholder="Digite uma nova mensagem aqui" data-testid="message-box" class="webchat__message__input webchat__input"/>
+      <input type="text" placeholder="Digite uma nova mensagem aqui" data-testid="message-box" class="webchat__message__input webchat__input" autofocus/>
       <button type="button" data-testid="send-button" class="webchat__message__button webchat__button">Enviar</button>
     </div>
   </main>
