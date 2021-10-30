@@ -16,6 +16,9 @@
 
 <br>
 
+## 🚀 Veja o projeto online
+  - [TryChat](https://trychat-socket.herokuapp.com/)
+
 ## 🧪 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
