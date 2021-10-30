@@ -1,4 +1,4 @@
-const socket = window.io('https://trychat-socket.herokuapp.com/');
+const socket = window.io();
 
 const userButton = document
   .querySelector('.webchat_nickname__button');
