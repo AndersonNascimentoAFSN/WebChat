@@ -14,8 +14,8 @@ io.on('connection', (socket) => {
     io.emit('listUsers', Object.values(users));
   });
 
-  socket.on('message', async ({ nickname, chatMessage, socketId = '' }) => {
-    await sendMessage({ socketId, nickname, chatMessage, io, users });
+  socket.on('message', async ({ nickname, chatMessage }) => {
+    await sendMessage({ nickname, chatMessage, io, users });
   });
 
   socket.on('disconnect', () => {

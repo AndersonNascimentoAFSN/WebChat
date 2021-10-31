@@ -61,10 +61,8 @@ socket.on('listUsers', (nicknames) => {
 
 messageButton.addEventListener('click', (_e) => {
   const message = document.querySelector('.webchat__message__input');
-  // const onlineUser = document.querySelectorAll('.online-user');
-  // const nickname = onlineUser[onlineUser.length - 1].textContent;
   const nickname = getSessionStorage('user');
-  socket.emit('message', { chatMessage: message.value, nickname, socketId: socket.id });
+  socket.emit('message', { chatMessage: message.value, nickname });
 
   message.value = '';
 });
