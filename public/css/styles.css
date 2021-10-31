@@ -192,4 +192,8 @@ main {
     padding: 8px;
   }
 
+  .webchat__message__item {
+    margin-bottom: 8px;
+    padding: 5px;
+  }
 }
