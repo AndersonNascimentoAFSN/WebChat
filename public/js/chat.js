@@ -10,6 +10,7 @@ const messageBox = document
   .querySelector('.webchat__message__box');
 
 const saveSessionStorage = (key, value) => window.sessionStorage.setItem(key, value);
+
 const getSessionStorage = (key) => window.sessionStorage.getItem(key);
 
 const createElementsNickNameInTheBox = (nicknames) => {
@@ -45,12 +46,16 @@ const createElementsMessageInTheBox = (message) => {
 
 userButton.addEventListener('click', (_e) => {
   const nickname = document.querySelector('.webchat_nickname__input');
+
+  if (!nickname.value) return;
+
   socket.emit('nickname', nickname.value);
   saveSessionStorage('user', nickname.value);
   nickname.value = '';
 });
 
 socket.on('nickname', (nickname) => {
+  if (!nickname) return;
   saveSessionStorage('user', nickname);
 });
 
@@ -61,10 +66,8 @@ socket.on('listUsers', (nicknames) => {
 
 messageButton.addEventListener('click', (_e) => {
   const message = document.querySelector('.webchat__message__input');
-  // const onlineUser = document.querySelectorAll('.online-user');
-  // const nickname = onlineUser[onlineUser.length - 1].textContent;
   const nickname = getSessionStorage('user');
-  socket.emit('message', { chatMessage: message.value, nickname, socketId: socket.id });
+  socket.emit('message', { chatMessage: message.value, nickname });
 
   message.value = '';
 });
