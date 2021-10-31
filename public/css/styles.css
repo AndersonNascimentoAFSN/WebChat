@@ -20,6 +20,7 @@
 body {
   background: var(--background-color);
   color: var(--primary-color);
+  line-height: 1.429;
 }
 
 img {
@@ -63,8 +64,9 @@ main {
   grid-area: message_box;
 }
 
-.webchat__message__box li {
+.webchat__message__box p {
   line-height: 1.5;
+  word-wrap: break-word;
 }
 
 .webchat__message__item {
@@ -78,13 +80,24 @@ main {
 .webchat_user__box , .webchat__message__box {
   font-size: 1.265rem;
   list-style-type: none;
-  overflow: hidden;
-  overflow-y: scroll;
+  overflow: auto;
   padding: 10px;
 }
 
 .webchat__message__input {
   grid-area: message_input;
+  height: 100%;
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+  resize: none;
+  text-indent: 0;
+  text-rendering: auto;
+  text-shadow: none;
+  text-transform: none;
+  white-space: pre-wrap;
+  width: 100%;
+  word-spacing: normal;
+  writing-mode: horizontal-tb;
 }
 
 .webchat_message_button {
@@ -148,4 +161,35 @@ main {
     font-size: 0.8rem;
     padding: 5px;
   }
+}
+
+@media screen and ( max-width : 400px ) {
+
+  main {
+    padding: 10px;
+  }
+
+  .header__logo {
+    max-width: 100px;
+  }
+
+  .c_webchat {
+    display: grid;
+    grid-gap: 5px;
+    grid-template: 'nickname_input nickname_input nickname_button' 6vh
+      'user_box user_box user_box' 10vh
+      'message_box message_box message_box' 50vh
+      'message_input message_input message_button ' 8vh
+      / 2.5fr 5fr 1.8fr;
+    margin: 20px auto;
+  }
+
+  .webchat__input {
+    padding: 2px;
+  }
+
+  .webchat__message__box {
+    padding: 8px;
+  }
+
 }

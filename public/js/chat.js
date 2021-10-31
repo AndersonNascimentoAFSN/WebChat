@@ -37,7 +37,7 @@ const deleteElementsNickNameInTheBox = () => {
 };
 
 const createElementsMessageInTheBox = (message) => {
-  const messageElement = document.createElement('li');
+  const messageElement = document.createElement('p');
   messageElement.setAttribute('data-testid', 'message');
   messageElement.textContent = message;
   messageElement.classList.add('webchat__message__item');
