@@ -20,6 +20,8 @@
 body {
   background: var(--background-color);
   color: var(--primary-color);
+
+  /* height: 80vh; */
   line-height: 1.429;
 }
 
@@ -28,13 +30,23 @@ img {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   font-family: Roboto, sans-serif;
-  max-height: 200px;
+  height: 100vh;
+  justify-content: center;
   padding: 20px;
 }
 
 .c-header {
+  height: 15vh;
   text-align: center;
+}
+
+.header__logo {
+
+  /* height: 15vh; */
+  height: 100%;
 }
 
 .c_webchat {
